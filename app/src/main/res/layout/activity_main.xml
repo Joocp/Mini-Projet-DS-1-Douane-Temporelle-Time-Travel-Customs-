@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+
+<!--ScrollView: Najmout nestamlou aka assenseur eli yatl3ik w yabtek el fouk w el louta w ala el ymin w el lissar fel interface mta el application mte3na-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    android:padding="24dp">
+    <!--Yhot les elements ala kobr el interface verticalement et horzantalement-->
+
+    <!--Yssafaf les elements ta7t b3adhom-->
+    <LinearLayout
+        android:id="@+id/layout_formulaire_os"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="0dp"
+        >
+        <!--android:id-> Najmou ngamrou beha LinearLayout beach nmanipuliwhom fel code mta el java-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Titre mata el Application -->
+        <TextView
+            android:id="@+id/txt_titre_os"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DOUANE TEMPORELLE"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+
+    </LinearLayout>
+
+</ScrollView>
