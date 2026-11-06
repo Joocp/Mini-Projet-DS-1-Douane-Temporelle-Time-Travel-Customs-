@@ -116,8 +116,17 @@
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:text="Fuite" />
-
         </RadioGroup>
+
+        <!-- Champ de bouton -->
+        <Button
+            android:id="@+id/btn_inspecter_os"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inspecter le profil"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp" />
 
 
 
