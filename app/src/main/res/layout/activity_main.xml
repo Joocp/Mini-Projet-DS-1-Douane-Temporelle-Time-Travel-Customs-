@@ -44,6 +44,22 @@
             android:hint="Saisir le nom du voyageur"
             android:inputType="textPersonName"
             android:layout_marginBottom="16dp" />
+        -- champ mta annee de naissance -->
+        <TextView
+            android:id="@+id/txt_naissance_os"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Année de naissance"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_naissance_os"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Exemple : 1990"
+            android:inputType="number"
+            android:layout_marginBottom="16dp" />
 
 
 
