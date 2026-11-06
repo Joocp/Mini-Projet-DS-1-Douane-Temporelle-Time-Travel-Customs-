@@ -62,6 +62,24 @@
             android:hint="Exemple : 1990"
             android:inputType="number"
             android:layout_marginBottom="16dp" />
+        <!-- champ mta annee de destination -->
+        <TextView
+            android:id="@+id/txt_destination_os"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Année de destination"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_destination_os"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="Exemple : 2050"
+            android:inputType="number"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
 
 
 
