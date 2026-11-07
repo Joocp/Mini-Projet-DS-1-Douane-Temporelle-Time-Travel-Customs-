@@ -12,6 +12,11 @@ import android.widget.RadioGroup;                      //manipultion des group d
 import android.widget.Button;                          //manipulation de button inspecter
 
 public class MainActivity extends AppCompatActivity {     //MainActivity:hiya el 1st ecran mta activiter
+    // manipulation mta les elements el mawjoudin fel xml
+      // declaration mta varriables de l'interface
+    EditText edtNom, edtNaissance, edtDestination;
+    RadioGroup radioMotif;
+    Button btnInspecter;
     @Override
     protected void onCreate(Bundle savedInstanceState) { //intialisiw l'interface l'activiter w nhadroulha les element mte3ha
         super.onCreate(savedInstanceState);
@@ -35,9 +40,5 @@ public class MainActivity extends AppCompatActivity {     //MainActivity:hiya el
         );
     }
 
-    // manipulation mta les elements el mawjoudin fel xml
-    // declaration mta varriables de l'interface
-    EditText edtNom, edtNaissance, edtDestination;
-    RadioGroup radioMotif;
-    Button btnInspecter;
+
 }
