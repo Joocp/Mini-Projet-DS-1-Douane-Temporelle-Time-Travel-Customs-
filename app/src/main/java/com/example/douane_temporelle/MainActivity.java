@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {     // MainActivity:hiya e
 
 
             // Créer un Intent pour passer vers l'activité 2
-            Intent intent = new Intent(MainActivity.this, VerficaActivity.class); // Intent():bech najmou nemchiw men activite l activite o5ra
+            Intent intent = new Intent(MainActivity.this, Verif_Activity.class); // Intent():bech najmou nemchiw men activite l activite o5ra
 
             // Envoyer les informations du voyageur
             intent.putExtra("4198_NOM_VOYAGEUR", nom);  // Beach nab3thou les informations lel activite lor5ra
