@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_verif_yg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <!-- Taswira 3al ysar, poids 0.3 -->
+    <ImageView
+        android:id="@+id/img_billet_yg"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:contentDescription="billet" />
+
+    <!-- RelativeLayout 3al ymin, poids 0.7 l ktiba w buttons -->
+    <RelativeLayout
+        android:id="@+id/relative_billet_yg"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:padding="12dp">
+
+        <!-- Titre — declared 1er, ma3ndou 7atta reference l 7aja 9blou -->
+        <TextView
+            android:id="@+id/txt_titre_yg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PASSPORT TEMPOREL"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <!-- nom  -->
+        <TextView
+            android:id="@+id/txt_nom_yg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_titre_yg"
+            android:layout_marginTop="16dp"
+            android:text="Nom :" />
+
+        <!-- age temporel -->
+        <TextView
+            android:id="@+id/txt_age_yg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_nom_yg"
+            android:layout_marginTop="8dp"
+            android:text="Âge temporel :" />
+
+        <!-- motif -->
+        <TextView
+            android:id="@+id/txt_motif_yg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_age_yg"
+            android:layout_marginTop="8dp"
+            android:text="Motif :" />
+
+        <!-- 8) Bouton rafth — layout_below reference txt_motif_yg -->
+
+        <Button
+            android:id="@+id/btn_refuser_yg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_motif_yg"
+            android:layout_marginTop="427dp"
+            android:text="Refuser (Risque de paradoxe)" />
+
+        <!-- Bouton approuver — layout_below reference btn_refuser_yg -->
+
+        <Button
+            android:id="@+id/btn_approuver_yg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_refuser_yg"
+            android:layout_marginTop="23dp"
+            android:text="Approuver le saut temporel" />
+
+    </RelativeLayout>
+</LinearLayout>
