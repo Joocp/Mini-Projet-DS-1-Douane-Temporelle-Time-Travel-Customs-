@@ -2,16 +2,17 @@ package com.example.douane_temporelle;                    // El package eli y3ar
 
 import android.os.Bundle;                                 // Classe tgerie les infomations mta l'activite
 import androidx.activity.EdgeToEdge;                      // Testa3mal l'espace hata lil a7raf mta l'ecran
-import androidx.appcompat.app.AppCompatActivity;         // Tedhi classe basic beach namlou beha activite android
-import androidx.core.graphics.Insets;                    // Traj3lna les dimensions mta zone el system
-import androidx.core.view.ViewCompat;                    // Tapliqui des operations ala interface
-import androidx.core.view.WindowInsetsCompat;           // Tdecali el formulair beach ynajem yrah el utilisateur
-import android.widget.EditText;                        // Manipulation de champ de saisir
-import android.widget.RadioGroup;                      // Manipultion des group de motifs
-import android.widget.Button;                         // Manipulation de button inspecter
-import android.widget.Toast;                         // Ykharej message sghir temporaire ala l'ecron EXP:"Vouilliez remplir tous les champs"
-import java.util.Calendar;                           // Trajalek el annee actuelle
-import android.widget.RadioButton;                   // Nesthakoha ki beach nraj3ou continue mta motif
+import androidx.appcompat.app.AppCompatActivity;          // Tedhi classe basic beach namlou beha activite android
+import androidx.core.graphics.Insets;                     // Traj3lna les dimensions mta zone el system
+import androidx.core.view.ViewCompat;                     // Tapliqui des operations ala interface
+import androidx.core.view.WindowInsetsCompat;             // Tdecali el formulair beach ynajem yrah el utilisateur
+import android.widget.EditText;                           // Manipulation de champ de saisir
+import android.widget.RadioGroup;                         // Manipultion des group de motifs
+import android.widget.Button;                             // Manipulation de button inspecter
+import android.widget.Toast;                              // Ykharej message sghir temporaire ala l'ecron EXP:"Vouilliez remplir tous les champs"
+import java.util.Calendar;                                // Trajalek el annee actuelle
+import android.widget.RadioButton;                        // Nesthakoha ki beach nraj3ou continue mta motif
+import android.content.Intent;                            // Nesthakoha ki beach nab3thhou des donnes men classe l classe o5ra
 
 public class MainActivity extends AppCompatActivity {     // MainActivity:hiya el 1st ecran mta activiter
 
@@ -175,10 +176,18 @@ public class MainActivity extends AppCompatActivity {     // MainActivity:hiya e
             }
 
 
-            // Idha ken inputs el kol mawjoudin w el format mte3homm shiha w el correlation ma bin les annees shiha yokhjelna message el formulaire t3abet shiha
-            Toast.makeText(MainActivity.this,
-                    "Formulaire remplie correctement !",
-                    Toast.LENGTH_SHORT).show();
+
+            // Créer un Intent pour passer vers l'activité 2
+            Intent intent = new Intent(MainActivity.this, VerficaActivity.class); // Intent():bech najmou nemchiw men activite l activite o5ra
+
+            // Envoyer les informations du voyageur
+            intent.putExtra("4198_NOM_VOYAGEUR", nom);  // Beach nab3thou les informations lel activite lor5ra
+            intent.putExtra("4198_ANNEE_NAISSANCE", anneeNaissance);
+            intent.putExtra("4198_ANNEE_DESTINATION", anneeDestination);
+            intent.putExtra("4198_MOTIF", motif);
+
+          // Ouvrir l'activité 2
+            startActivity(intent);
 
 
 
