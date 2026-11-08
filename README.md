@@ -2,8 +2,10 @@
 
 
 
-# Omar Salah A04  :
-
+# Omar Salah A04  ---> Activite 1: formulaire d'Enrgistrement (MainActivity)
+## Les fichiers realises:
+- activity_main.xml
+- MainActivity.java
 
 
 
