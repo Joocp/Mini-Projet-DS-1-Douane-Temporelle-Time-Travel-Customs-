@@ -6,14 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;         // Tedhi classe basic b
 import androidx.core.graphics.Insets;                    // Traj3lna les dimensions mta zone el system
 import androidx.core.view.ViewCompat;                    // Tapliqui des operations ala interface
 import androidx.core.view.WindowInsetsCompat;           // Tdecali el formulair beach ynajem yrah el utilisateur
-
 import android.widget.EditText;                        // Manipulation de champ de saisir
 import android.widget.RadioGroup;                      // Manipultion des group de motifs
 import android.widget.Button;                         // Manipulation de button inspecter
-
 import android.widget.Toast;                         // Ykharej message sghir temporaire ala l'ecron EXP:"Vouilliez remplir tous les champs"
-
-import java.util.Calendar;                          // Trajalek el annee actuelle
+import java.util.Calendar;                           // Trajalek el annee actuelle
+import android.widget.RadioButton;                   // Nesthakoha ki beach nraj3ou continue mta motif
 
 public class MainActivity extends AppCompatActivity {     // MainActivity:hiya el 1st ecran mta activiter
 
@@ -21,6 +19,7 @@ public class MainActivity extends AppCompatActivity {     // MainActivity:hiya e
     EditText edtNom, edtNaissance, edtDestination;
     RadioGroup radioMotif;
     Button btnInspecter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { // Intialisiw l'interface l'activiter w nhadroulha les element mte3ha
@@ -44,9 +43,9 @@ public class MainActivity extends AppCompatActivity {     // MainActivity:hiya e
                 }
         );
 
-        // Manipulation mta les elements el mawjoudin fel xml
 
-        //  Norbtou les champs de saisie m3a les éléments XML
+        // Manipulation mta les elements el mawjoudin fel xml
+          //  Norbtou les champs de saisie m3a les éléments XML
         edtNom = findViewById(R.id.edt_nom_os);           // findViewById: Tfarkes al element fel xml
         edtNaissance = findViewById(R.id.edt_naissance_os);    // R.id.edt_nom_os: id mta el champ fel xml
         edtDestination = findViewById(R.id.edt_destination_os);
@@ -59,6 +58,7 @@ public class MainActivity extends AppCompatActivity {     // MainActivity:hiya e
 
         // Bech neprogramiw el nazla mta el bouton "Inspecter" beach tamel collection lel les donners eli maktoubin fel interface mte3na w tab3athom lil activite2 (le scanner de paradoxe)
 
+
         btnInspecter.setOnClickListener(v -> {     // setOnClickListener: tdetecti el click ala el bouton
 
             // Trecuperie les informations el maktoubin fel les champs de saisir
@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {     // MainActivity:hiya e
 
             // Tetaked  eli un motif est sélectionné
             int motifSelectionne = radioMotif.getCheckedRadioButtonId(); // getCheckedRadioButtonId(): traje3 le id mta el motif eli tselectionnet
+
 
             // Vérifier si les champs sont vides
             if (nom.isEmpty() ||
@@ -83,6 +84,11 @@ public class MainActivity extends AppCompatActivity {     // MainActivity:hiya e
 
                 return;
             }
+
+            // Récupérer le continue de motif choisie
+            RadioButton radioChoisi = findViewById(motifSelectionne);  // findViewById():Tlawaj el bouton radio selectionnee
+            String motif = radioChoisi.getText().toString();
+
 
             // Idha ken el esm voyageur mahouch chaine de caractere bech yokhrojlek message temporaire ykolek rouhou el nom lezmou ykoun fromat chaine
             if (!nom.matches("[\\p{L} ]+")) { // Tekbel des les forma des lettres, espaces, accents, espaces et refuse les chiffres
@@ -112,12 +118,13 @@ public class MainActivity extends AppCompatActivity {     // MainActivity:hiya e
             }
 
             // Beach nverifiw el cohearance bin annee de naissance et e de destination
-
+            int anneeNaissance;
+            int anneeDestination;
             try {
 
                 // Beach nparssiw el les chaine de caracter mta les champs annees lil int
-                int anneeNaissance = Integer.parseInt(naissance);
-                int anneeDestination = Integer.parseInt(destination);
+                 anneeNaissance = Integer.parseInt(naissance);
+                 anneeDestination = Integer.parseInt(destination);
 
                 // Récupérer l'année actuelle automatiquement
                 int anneeActuelle = Calendar.getInstance().get(Calendar.YEAR);
@@ -170,7 +177,7 @@ public class MainActivity extends AppCompatActivity {     // MainActivity:hiya e
 
             // Idha ken inputs el kol mawjoudin w el format mte3homm shiha w el correlation ma bin les annees shiha yokhjelna message el formulaire t3abet shiha
             Toast.makeText(MainActivity.this,
-                    "Formulaire rempli correctement !",
+                    "Formulaire remplie correctement !",
                     Toast.LENGTH_SHORT).show();
 
 
