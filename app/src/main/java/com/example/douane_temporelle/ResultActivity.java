@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ResultActivity extends AppCompatActivity {
 
     // variable temporaire
-    private final String matricule = "1234";    // Omar wala youssef a3tiwna lmatricule bch ni5dim beha
+    private final String matricule = "4198";    // Omar wala youssef a3tiwna lmatricule bch ni5dim beha
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
